@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($mail_sent) {
         http_response_code(200);
-        echo json_encode(["success" => true, "message" => "Thank you! Your message has been sent successfully. We\'ll get back to you soon."]);
+        echo json_encode(["success" => true, "message" => "Thank you! Your message has been sent successfully. We\\'ll get back to you soon."]);
     } else {
         http_response_code(500);
         echo json_encode(["success" => false, "error" => "Failed to send email. Please try again later."]);
